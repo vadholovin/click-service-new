@@ -1,0 +1,29 @@
+/* ==========================================================================
+   #S-MAILING
+   ========================================================================== */
+
+.s-mailing {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .container {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+
+.mailing-form {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(24px);
+
+  .input__wrapper {
+    margin-bottom: rem(8px);
+  }
+}
+
+.mailing-form .btn--primary {
+  box-shadow: none;
+}

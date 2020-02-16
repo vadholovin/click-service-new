@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+.footer  {
+  padding-top: rem(28px);
+  padding-bottom: rem(60px);
+  
+  @include mq($until: xs) {
+    font-size: rem(16px);
+  }
+}
+
+.footer__logo {
+  margin-bottom: rem(24px);
+  margin-left: 18px;
+}

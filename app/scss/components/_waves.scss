@@ -1,0 +1,45 @@
+/* ==========================================================================
+   #WAVES
+   ========================================================================== */
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 100px;
+
+  @include mq($until: xs) {
+    height: 50px;
+    min-height: 50px;
+  }
+}
+
+.waves--top {
+  transform: rotate(-0.5turn);
+}
+
+/* Animation */
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+.waves--top .parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 9s;
+}
+
+.waves--bottom .parallax>use:nth-child(1) {
+  animation-delay: -9s;
+  animation-duration: 7s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-85px, 0, 0);
+  }
+}

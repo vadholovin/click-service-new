@@ -1,0 +1,57 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  z-index: 100;
+
+  @include mq($from: sm) {
+    padding-top: 30px;
+  }
+
+  @include mq($from: md) {
+    padding-top: 40px;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 120px;
+  margin-left: 10px;
+  margin-right: auto;
+
+  @include mq($from: xs) {
+    width: 150px;
+  }
+
+  @include mq($from: sm) {
+    width: 180px;
+  }
+
+  @include mq($from: md) {
+    width: 225px;
+    margin-left: 22px;
+  }
+}
+
+.header__call {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 8px 20px;
+
+  @include mq($from: md) {
+    padding: 12px 40px;
+  }
+}
+
+.header__call .svg-icon {
+  margin-right: 8px;
+}

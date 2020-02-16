@@ -1,0 +1,93 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+.btn {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  user-select: none;
+  margin-top: rem(30px);
+  padding: 10px 28px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-family: $font-secondary;
+  font-weight: 500;
+  font-size: rem(16px);
+  line-height: 1.15;
+  text-decoration: none;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  transition:
+    background-color $ease-main,
+    border-color $ease-main,
+    box-shadow $ease-main,
+    color $ease-main;
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  @include mq($from: sm) {
+    font-size: rem(18px);
+  }
+  @include mq($from: md) {
+    margin-top: rem(44px);
+    padding: 12px 40px;
+    font-size: rem(22px);
+  }
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.btn--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn--primary {
+  border-color: $bg-warning;
+  color: #fff;
+  background-color: $bg-warning;
+  box-shadow: 3px 5px 0 #ebf3f4;
+
+  &:hover {
+    color: $text-warning;
+    background-color: transparent;
+  }
+}
+
+.btn--light {
+  border-color: #fff;
+  background-color: #fff;
+  color: $bg-warning;
+  box-shadow: 3px 5px 0 #1facb6;
+
+  &:hover {
+    border-color: $text-warning;
+    background-color: $text-warning;
+    color: #fff;
+  }
+}
+
+.btn-group {
+  text-align: center;
+
+  @include mq($until: sm) {
+    text-align: center;
+  }
+}

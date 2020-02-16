@@ -1,0 +1,26 @@
+/* ==========================================================================
+   #BASIC TYPOGRAPHY STYLES
+   ========================================================================== */
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+body {
+  font-family: $font-main;
+  font-weight: normal;
+  font-size: rem(18px);
+  line-height: 1.222;
+  color: $text-color;
+
+  @include mq($from: sm) {
+    font-size: rem(20px);
+  }
+  @include mq($from: md) {
+    font-size: rem(24px);
+  }
+  @include mq($from: lg) {
+    font-size: rem(30px);
+  }
+}

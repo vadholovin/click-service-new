@@ -1,0 +1,36 @@
+// 
+//-- MIXINS
+// 
+
+
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@mixin for-size($range) {
+
+  @if $range == xs-only {
+    @media (max-width: #{$phone-upper-boundary - 0.02}) { @content; }
+  } @else if $range == sm-up {
+    @media (min-width: $phone-upper-boundary) { @content; }
+  } @else if $range == md-up {
+    @media (min-width: $tablet-portrait-upper-boundary) { @content; }
+  } @else if $range == lg-up {
+    @media (min-width: $tablet-landscape-upper-boundary) { @content; }
+  } @else if $range == xl-up {
+    @media (min-width: $desktop-upper-boundary) { @content; }
+  } @else if $range == xxl-up {
+    @media (min-width: $desktop-wide-upper-boundary) { @content; }
+  }
+}
+
+@mixin gradient-text {
+  color: $highlight;
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

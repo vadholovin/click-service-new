@@ -1,0 +1,15 @@
+/* ==========================================================================
+   #TOOLTIP
+   ========================================================================== */
+
+.tooltipster-sidetip.tooltipster-shadow .tooltipster-box {
+	border-radius: 0;
+  width: 240px;
+  overflow: hidden;
+}
+
+.tooltipster-sidetip.tooltipster-shadow .tooltipster-content {
+	color: inherit;
+  padding: 16px;
+  font-size: rem(16px);
+}

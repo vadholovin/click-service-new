@@ -1,0 +1,61 @@
+/* ==========================================================================
+   #S-TOP
+   ========================================================================== */
+
+.s-top {
+  position: relative;
+  padding-top: 260px;
+  padding-bottom: 0;
+
+  @include mq($from: xs) {
+    padding-top: 300px;
+  }
+
+  @include mq($from: sm) {
+    padding-top: 405px;
+  }
+
+  @include mq($from: md) {
+    padding-top: 100px;
+  }
+}
+
+.top-text {
+  max-width: 520px;
+}
+
+.s-top .subheading {
+  margin-bottom: 0;
+}
+
+.top-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 230px;
+
+  @include mq($from: xs) {
+    width: 280px;
+  }
+
+  @include mq($from: sm) {
+    width: 380px;
+  }
+
+  @include mq($from: md) {
+    width: 500px;
+    top: -80px;
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+  @include mq($from: lg) {
+    width: 337px;
+    top: 0px;
+  }
+}
+
+// .top-img img {
+//   max-width: none;
+// }

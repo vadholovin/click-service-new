@@ -1,0 +1,45 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+.heading {
+  position: relative;
+  max-width: 700px;
+  margin-bottom: rem(16px);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  font-size: rem(20px);
+
+  @include mq($from: sm, $until: md) {
+    font-size: rem(30px);
+  }
+
+  @include mq($from: md) {
+    margin-bottom: rem(32px);
+    padding-left: 22px;
+    font-size: rem(40px);
+  }
+}
+
+.heading--warning::before,
+.heading--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-left: 5px solid;
+
+  @include mq($from: md) {
+    border-left-width: 7px;
+  }
+}
+
+.heading--primary::before {
+  border-color: $bg-primary;
+}
+.heading--warning::before {
+  border-color: $bg-warning;
+}

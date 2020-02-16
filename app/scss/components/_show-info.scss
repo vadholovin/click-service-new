@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #SHOW-INFO
+   ========================================================================== */
+
+.show-info::after {
+  content: '?';
+  position: relative;
+  top: -0.3em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-weight: 900;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}

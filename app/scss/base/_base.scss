@@ -1,0 +1,195 @@
+/* ==========================================================================
+   #BASE STYLES
+   ========================================================================== */
+html {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  min-width: 320px;
+  background-color: #fff;
+  overflow-x: inherit;
+
+  // &.is-modal-open {
+  //   overflow: hidden;
+  // }
+}
+
+hr {
+  display: block;
+  height: 0;
+  border: 0;
+  border-top: 1px solid $blue-dark;
+  margin-top: rem(60px);
+  margin-bottom: rem(60px);
+  padding: 0;
+
+  @include mq($from: md) {
+    margin-top: rem(80px);
+    margin-bottom: rem(80px);
+  }
+
+  @include mq($from: lg) {
+    margin-top: rem(120px);
+    margin-bottom: rem(120px);
+  }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+a {
+  color: $text-warning;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  transition: color $ease-main;
+
+  &:hover {
+    text-decoration: none;
+    color: mix(#000, $text-warning, 12%);
+  }
+}
+
+
+sup {
+  position: relative;
+  top: -.5em;
+  font-weight: 800;
+  font-size: 60%;
+  line-height: 0;
+  vertical-align: baseline;
+  border-bottom: 1px solid currentColor;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+b {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+p {
+  margin-bottom: rem(16px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+  background-color: transparent;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/general/bg-top.png);
+  background-repeat: no-repeat;
+  background-position: top -150px left 50%;
+
+  @include mq($from: xs) {
+    background-position: top 0 left 50%;
+  }
+
+  @include mq($from: sm) {
+    background-position: top 0 right 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mq($from: sm) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include mq($from: md) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include mq($from: lg) {
+    width: 1000px;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.logo {
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.section {
+
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.section--fired {
+  position: relative;
+  overflow: hidden;
+}

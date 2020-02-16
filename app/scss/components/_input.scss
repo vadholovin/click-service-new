@@ -1,0 +1,44 @@
+/* ==========================================================================
+   #INPUT
+   ========================================================================== */
+
+.input__wrapper {
+  display: block;
+  position: relative;
+}
+
+.input {
+  padding: 0 18px;
+  height: 50px;
+  border-bottom: 3px solid #fff;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: inherit;
+  line-height: 1.15;
+  border-radius: 0;
+  min-height: 0;
+  background-color: transparent;
+  transition: border-color $ease-main;
+
+  &:focus {
+    outline: none;
+    border-color: $bg-warning;
+  }
+
+  @include mq($from: md) {
+    height: 60px;
+  }
+
+  &::placeholder {
+    color: #587e8a;
+  }
+}
+
+.textarea {
+  @extend .input;
+
+  padding-top: 13px;
+  padding-bottom: 13px;
+  min-height: 150px;
+  resize: vertical;
+}

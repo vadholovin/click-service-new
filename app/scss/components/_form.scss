@@ -1,0 +1,14 @@
+/* ==========================================================================
+   #FORM
+   ========================================================================== */
+
+.form label.error {
+  display: block;
+  margin-top: 8px;
+  color: red;
+  font-size: rem(15px);
+}
+
+.form input.error {
+  border-color: red;
+}

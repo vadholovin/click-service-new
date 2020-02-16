@@ -1,0 +1,42 @@
+/* ==========================================================================
+   #LIST-STYLED
+   ========================================================================== */
+
+.list-styled {
+
+  li {
+    position: relative;
+    margin: 0;
+    padding-left: 25px;
+
+    @include mq($from: md) {
+      padding-left: 40px;
+    }
+  }
+
+  li + li {
+    margin-top: rem(16px);
+  
+    @include mq($from: md) {
+      margin-top: rem(24px);
+    }
+  }
+
+  li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    transform: translateY(-50%);
+    border: 4px solid $bg-warning;
+    border-radius: 50%;
+  
+    @include mq($from: md) {
+      width: 26px;
+      height: 26px;
+      border-width: 6px;
+    }
+  }
+}
