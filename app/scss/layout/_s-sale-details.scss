@@ -4,4 +4,43 @@
 
 .sale-details__top {
   margin-bottom: rem(80px);
+  text-align: center;
+}
+
+.sale-details__heading {
+  text-align: left;
+}
+
+.sale-details-timer {
+
+  .timer-chart {
+
+    @include mq($from: md) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .timer-chart + .timer-chart {
+
+    @include mq($from: md) {
+      margin-left: 24px;
+    }
+  }
+
+  .timer-chart + .timer-chart::before {
+    
+    @include mq($from: md) {
+      font-size: 40px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  .timer-chart__value {
+    
+    @include mq($from: md) {
+      font-size: 40px;
+    }
+  }
 }

@@ -10,26 +10,6 @@
 
   <link rel="stylesheet" href="libs/aos/aos.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <script src="js/vendor/jquery-3.3.1.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.tooltip').tooltipster({
-        theme: 'tooltipster-shadow',
-        trigger: 'custom',
-        triggerOpen: {
-          mouseenter: true,
-          click: true,
-          tap: true,
-        },
-        triggerClose: {
-          click: true,
-          tap: true,
-          scroll: true,
-        }
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -76,8 +56,7 @@
              data-aos="fade-up"
              data-aos-delay="300">
              При этом сократим бюджет на привлечение клиентов!
-             <br>
-             Гарантия результата!
+             Гарантия&nbsp;результата!
           </p>
           <div class="btn-group">
             <a class="btn btn--primary" href="#s-mailing">
@@ -119,7 +98,7 @@
           Если вам интересно наше предложение, то скорее бронируйте! Мы не берем много клиентов в раз, что бы не страдало качество!
         </p>
         <div class="btn-group" data-aos="zoom-in-up">
-          <a class="btn btn--light" href="#s-mailing">
+          <a class="btn btn--light" href="#s-mailing" data-mail-subject="Забронировать место">
             Забронировать место
           </a>
         </div>
@@ -143,7 +122,7 @@
         <h2 class="heading heading--primary" data-aos="fade-right">
           Что сделаем мы:
         </h2>
-        
+
         <ul class="list-styled" data-aos="fade-left">
           <li>Проведем аудит Instagram</li>
           <li>Проведем аудит РК</li>
@@ -162,7 +141,7 @@
         <p class="services__desc">
           Все это за 3 рабочих дня, с момента утверждения вами всех деталей!
         </p>
-        
+
         <div class="btn-group" data-aos="zoom-in-up">
           <a class="btn btn--primary" href="#s-mailing">
             Заказать
@@ -206,7 +185,7 @@
         </p>
 
         <div class="btn-group" data-aos="zoom-in-up">
-          <a class="btn btn--light" href="#s-mailing">
+          <a class="btn btn--light" href="#s-mailing" data-mail-subject="Забронировать место">
             Забронировать место
           </a>
         </div>
@@ -228,14 +207,26 @@
     <div class="s-sale-details section">
       <div class="container">
         <div class="sale-details__top">
-          <h2 class="heading heading--primary" data-aos="fade-right">
+          <h2 class="sale-details__heading heading heading--primary" data-aos="fade-right">
             Акция временная!
           </h2>
-          <div class="timer js-timer" data-aos="flip-up">
-  
+
+          <div class="sale-details-timer timer timer--square js-timer" data-aos="flip-up">
+            <!-- <div class="timer-chart js-graph">
+              <div class="timer-chart__value" id="days"></div>
+            </div> -->
+            <div class="timer-chart js-graph">
+              <div class="timer-chart__value" id="hours"></div>
+            </div>
+            <div class="timer-chart js-graph">
+              <div class="timer-chart__value" id="minutes"></div>
+            </div>
+            <div class="timer-chart js-graph">
+              <div class="timer-chart__value" id="seconds"></div>
+            </div>
           </div>
           <div class="btn-group" data-aos="zoom-in-up">
-            <a class="btn btn--primary" href="#s-mailing">
+            <a class="btn btn--primary" href="#s-mailing" data-mail-subject="Заказать по акции">
               Заказать по акции
             </a>
           </div>
@@ -244,22 +235,38 @@
         <h2 class="heading heading--primary" data-aos="fade-right">
           От Вас нужно всего лишь:
         </h2>
-        
-        <ul class="list-styled" data-aos="fade-left">
+
+        <ul class="list-styled accordion" data-aos="fade-left">
           <li>Знать свой бизнес</li>
           <li>Ссылка на Ваш instagram</li>
           <li>Заполнить краткий бриф</li>
           <li>Добавить нашего маркетолога в Ваш рекламный кабинет</li>
-          <li>Предоставить
-            <span class="show-info tooltip" title="Дедуктивный метод решительно представляет собой бабувизм. Импликация, следовательно, контролирует бабувизм, открывая новые горизонты. Надстройка нетривиальна">
-              <span class="text-underline">«чашку кофе»</span>
+          <li class="js-accordion">
+            <span>
+              Предоставить
+              <a href="#" class="show-info js-accordion-button">
+                <span class="text-underline">«чашку кофе»</span>
+              </a>
+              для клиентов
             </span>
-            для клиентов
+            <div class="accordion-item__content js-accordion-content">
+              <p>Что такое «чашка кофе» подумали Вы, это пожалуй сейчас самый важный инструмент в современном маркетинге! Потому как привычный маркетинг умер!</p>
+
+              <p>Так называемая «чашка кофе» стает уже неизменной классикой всех маркетологов. Это то что Вы можете дать своему потенциальному клиенту, бесплатно или с большой скидкой. То что утеплит ваши отношения и подтолкнет на совершение покупки.</p>
+
+              <p>Это может быть какая то скидка, либо инструкция, некий чек лист или полезная рекомендация от специалиста, либо просто что то бесплатное, для товарного бизнеса например в сфере продажи одежды это может быть перчатки в подарок или футболка, шарфик, платок, что угодно. Либо как пример это может быть look book по подбору образов от стилиста на грядущий год. Вариантов масса, все зависит от вашей фантазии.</p>
+
+              <p>В современных реалиях маркетинга, продажа в лоб уже не работает, не заманить людей обычной скидкой или акцией, более того, по последним данным 71% пользователей instagram, перелистывают когда видят явные признаки продажи. Люди сидят в соц сетях не для того что бы что то купить, они там в поисках развлекательного либо информационного контента. Их внимание может привлечь лишь что то интересное, полезное или совершенно бесплатное.</p>
+
+              <p>Объясню теперь простыми слова, на жизненном примере: В маркетинге как в отношениях мужчины и женщины, предположим молодой человек будет ходить по улицам города, знакомиться с девушками и сразу предлагать секс, то что он получит? У него будет очень маленькая конверсия, количество отказов будет очень большое, а вот если он предложит сначала условную «чашку кофе», сводит в ресторан или театр, может в кино, то у него конверсия будет гораздо больше, согласитесь, жизненно же? Неправда ли? А у нас сейчас в интернет маркетинге до сих пор все говорят в лоб, по этому и прожажи не такие как хотелось бы!</p>
+
+              <p>Мы нашли волшебную связку, придумали формулу рекламы будущего! И готовы поделиться с Вами этим секретом!</p>
+            </div>
           </li>
         </ul>
-        
+
         <div class="btn-group" data-aos="zoom-in-up">
-          <a class="btn btn--primary" href="#s-mailing">
+          <a class="btn btn--primary" href="#s-mailing" data-mail-subject="Заказать рекламу будущего">
              Заказать рекламу
              <br>
              будущего
@@ -306,7 +313,7 @@
           </p>
         </div>
         <div class="btn-group" data-aos="zoom-in-up">
-          <a class="btn btn--light" href="#s-mailing">
+          <a class="btn btn--light" href="#s-mailing" data-mail-subject="Купить курс по акции">
             Купить курс по акции
           </a>
         </div>
@@ -345,7 +352,7 @@
         </div>
 
         <div class="btn-group" data-aos="zoom-in-up">
-          <a class="btn btn--primary" href="#s-mailing">
+          <a class="btn btn--primary" href="#s-mailing" data-mail-subject="Заказать по акции">
             Заказать по акции
           </a>
         </div>
@@ -353,7 +360,7 @@
     </div>
 
 
-    <div class="s-webinar section text-white bg-primary section--fired">
+    <div class="s-webinar section">
       <div class="fireflies">
         <div class="firefly"></div>
         <div class="firefly"></div>
@@ -376,14 +383,14 @@
         </svg>
       </div>
       <div class="container">
-        <h2 class="heading heading--warning" data-aos="fade-right">
+        <h2 class="heading heading--primary" data-aos="fade-right">
           Если Вы не готовы тратиться на услугу или на курс
         </h2>
         <p class="subheading" data-aos="fade-left">
           То приходите на вебинар от платформы ClickChat. Там много полезной информации по новинкам digital индустрии, по продвижению и чат-ботам.
         </p>
         <div class="btn-group" data-aos="zoom-in-up">
-          <a class="btn btn--light" href="#s-mailing">
+          <a class="btn btn--primary" href="#s-mailing" data-mail-subject="Записаться на вебинар">
             Записаться на вебинар
           </a>
         </div>
@@ -399,7 +406,8 @@
             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
           </defs>
           <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="#24bdc8" />
+            <!-- <use xlink:href="#gentle-wave" x="48" y="0" fill="#24bdc8" /> -->
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="#fff" />
           </g>
         </svg>
       </div>
@@ -414,6 +422,7 @@
         </p>
 
         <form action="" class="form mailing-form js-form" id="feedback">
+          <input type="hidden" name="feedback-subject" id="feedback-subject">
           <div class="input__wrapper">
             <input type="text" class="input" name="feedback-name" id="feedback-name" placeholder="Ваше имя*" require>
           </div>
@@ -474,9 +483,10 @@
     </button>
   </div>
 
-  <!-- <script src="js/vendor/jquery-3.3.1.min.js"></script> -->
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,88 @@
+/* ==========================================================================
+   #ACCORDION
+   ========================================================================== */
+
+.accordion-item {
+  position: relative;
+  margin: 0;
+  
+}
+
+.accordion-item + .accordion-item {
+  margin-top: rem(16px);
+
+  @include mq($from: md) {
+    margin-top: rem(24px);
+  }
+}
+
+.accordion-item__heading {
+  font-size: rem(18px);
+  line-height: 1.3;
+
+  @include mq($from: sm) {
+    font-size: rem(20px);
+  }
+  @include mq($from: md) {
+    font-size: rem(24px);
+  }
+  @include mq($from: lg) {
+    font-size: rem(30px);
+  }
+}
+
+.accordion-item__button {
+  position: relative;
+  padding-left: 25px;
+  text-align: left;
+  line-height: 1.2;
+  cursor: pointer;
+
+  @include mq($from: md) {
+    padding-left: 40px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.accordion-item__button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  // top: 10px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  transform: translateY(-50%);
+  border: 4px solid $bg-warning;
+  border-radius: 50%;
+
+  @include mq($from: md) {
+    // top: 15px;
+    width: 26px;
+    height: 26px;
+    border-width: 6px;
+  }
+}
+
+.accordion-item__button-more {
+  color: $text-warning;
+
+  .is-active & {
+    display: none;
+  }
+}
+
+
+.accordion-item__content {
+  display: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+  .is-active & {
+    display: block;
+  }
+}

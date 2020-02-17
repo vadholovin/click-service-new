@@ -4,7 +4,9 @@
 // $to = 'info@click-service.me'; //вставить свой имейл 
 $to = 'spheric.zoo@gmail.com'; //вставить свой имейл 
 
-$subject = 'Click-Service.me';
+$subject = htmlspecialchars($_POST['feedback-subject']) ?
+  htmlspecialchars($_POST['feedback-name']) :
+  'Click-Service.me';
 $name = htmlspecialchars($_POST['feedback-name']);
 $phone = htmlspecialchars($_POST['feedback-phone']);
 $email = htmlspecialchars($_POST['feedback-email']);
